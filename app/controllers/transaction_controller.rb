@@ -13,7 +13,7 @@ class TransactionController < ApplicationController
     if @transaction.save
       @group_categories = GroupCategory.new(group_id: params[:category_id], category_id: @transaction.id)
       if @group_categories.save
-        redirect_to category_transaction_index_path(params[:category_id]), notice: "Successfully created transaction."
+        redirect_to category_transaction_index_path(params[:category_id]), notice: 'Successfully created transaction.'
       else
         render :new
       end
@@ -31,7 +31,7 @@ class TransactionController < ApplicationController
     group = Group.find(params[:category_id])
     @transaction = group.categories.find(params[:id])
     category = Category.find(@transaction.id)
-    category.group_categories.find_by(category_id: category.id).destroy 
+    category.group_categories.find_by(category_id: category.id).destroy
     @transaction.destroy
     if @transaction.destroy
       redirect_to category_transaction_index_path(params[:category_id])

@@ -9,13 +9,13 @@ class CategoriesController < ApplicationController
     @category = Group.new(category_params)
     @category.user_id = current_user.id
     if @category.save
-      redirect_to root_path, notice: "Category was successfully created."
+      redirect_to root_path, notice: 'Category was successfully created.'
     else
       render :new
     end
   end
 
-  def destroy 
+  def destroy
     @category = Group.find(params[:id])
     @category.group_categories.destroy_all
     Category.destroy_all
