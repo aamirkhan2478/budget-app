@@ -25,6 +25,7 @@ class TransactionController < ApplicationController
   def new
     @transaction = Category.new
     @group = Group.new
+    @categories = current_user.groups.all
   end
 
   def destroy

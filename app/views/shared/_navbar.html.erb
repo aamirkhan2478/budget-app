@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <% if root_path %>
       <%= link_to path do %>
-        <i class="fa fa-arrow-left  text-white"></i>
+        <i class="<%= visible %> fa fa-arrow-left text-white"></i>
       <% end %>
     <% else %>
       <i class="fa fa-bars text-white">

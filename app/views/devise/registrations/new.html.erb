@@ -1,4 +1,4 @@
-<%= render "shared/navbar", {text:"Register", path:new_user_session_path} %>
+<%= render "shared/navbar", {text:"Register", path:new_user_session_path, visible:"visible"} %>
 <%= render "devise/shared/error_messages", resource: resource %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <div class="card">

@@ -1,4 +1,4 @@
-<%= render "shared/navbar", {text:"Login", path:root_path} %>
+<%= render "shared/navbar", {text:"Login", path:root_path, visible:"visible"} %>
 <%= render "shared/flash_messages" %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="card">

@@ -1,4 +1,4 @@
-<%= render "shared/navbar", {text:"Edit #{resource_name.to_s.humanize}", path:root_path}  %>
+<%= render "shared/navbar", {text:"Edit #{resource_name.to_s.humanize}", path:root_path, visible:"visible"}  %>
 <%= render "devise/shared/error_messages", resource: resource %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <div class="card">

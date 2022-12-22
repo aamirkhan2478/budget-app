@@ -1,4 +1,4 @@
-<%= render "shared/navbar", {text:"Categories", path: root_path} %>
+<%= render "shared/navbar", {text:"Categories", path: root_path, visible:"invisible"} %>
 <%= render "shared/flash_messages" %>
 <div class="card" style="height:60px;">
   <div class="card-body">
@@ -30,7 +30,7 @@
         <div class="card-body">
           <div class="row d-flex align-items-center">
             <div class="col-3">
-              <img src="../../assets/<%= category.icon%>" class="img-fluid" alt="...">
+              <img src="<%= category.icon%>" class="img-fluid" alt="...">
             </div>
             <div class="col-5">
               <p class="card-text"><%= category.name %></p>
