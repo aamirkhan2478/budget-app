@@ -9,7 +9,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Full Stack ](#full-stack-)
     - [Key Features ](#key-features-)
-    - [Screen Shots](#screen-shots)
+  - [:camera: Screen Shots](#camera-screen-shots)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -28,8 +28,7 @@
 
 # 📖 Budget App <a name="about-project"></a>
 
-> This is a budget app where you can setup your different budgets and you can create different categories and also delete your own categories and also create new transactions and also delete your own transactions.   
-
+> This is a budget app where you can setup your different budgets and you can create different categories and also delete your own categories and also create new transactions and also delete your own transactions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -73,16 +72,16 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Screen Shots -->
-### Screen Shots
+
+## :camera: Screen Shots
+
 <details>
 <summary>Screen Shots</summary>
-  <ul>
-    <li>![splash page](./screen%20shots/ss-1.png)</li>
-    <li>![login page](./screen%20shots/ss-2.png)</li>
-    <li>![sign up page](./screen%20shots/ss-3.png)</li>
-    <li>![categories Page](./screen%20shots/ss-4.png)</li>
-    <li>![Transactions page](./screen%20shots/ss-5.png)</li>
-  </ul>
+<img src="./screenshots/ss-1.png"/>
+<img src="./screenshots/ss-2.png"/>
+<img src="./screenshots/ss-3.png"/>
+<img src="./screenshots/ss-4.png"/>
+<img src="./screenshots/ss-5.png"/>
 </details>
 
 <!-- LIVE DEMO -->
@@ -133,7 +132,6 @@ command:
   gem install
 ```
 
-
 ### Usage
 
 To run the project, execute the following command:
@@ -144,7 +142,6 @@ command:
   rails s
 ```
 
-
 ### Run tests
 
 To run tests, run the following command:
@@ -154,7 +151,6 @@ command:
 ```sh
   rspec
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,8 +192,6 @@ Feel free to check the [issues page](https://github.com/aamirkhan2478/my-blog/is
 ## ⭐️ Show your support <a name="support"></a>
 
 > If you like this project then you can show your support by giving to this project star.
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
