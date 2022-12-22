@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <% if root_path %>
+      <%= link_to path do %>
+        <i class="<%= visible %> fa fa-arrow-left text-white"></i>
+      <% end %>
+    <% else %>
+      <i class="fa fa-bars text-white">
+      </i>
+    <% end %>
+    <a class="navbar-brand" href="#"><%= text %></a>
+    <% if current_user.present? %>
+      <%= button_to destroy_user_session_path, class:"btn", method: :delete do %>
+        <i class="fa fa-power-off text-danger"></i>
+      <% end %>
+    <% else %>
+      <i class="fa fa-user text-white"></i>
+    <% end %>
+  </div>
+</nav>

@@ -1,0 +1,64 @@
+<%= render "shared/navbar", {text:"Transaction", path:root_path, visible:"visible"} %>
+<%= render "shared/flash_messages" %>
+<div class="card" style="height:60px;">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-7">
+        <p class="text-muted">Credit</p>
+      </div>
+      <div class="col-4">
+        <p class="text-dark fw-bold">
+          <small>
+            <% credit = 0 %>
+            <% @categories.each do |group| %>
+              <% total_groups = @categories.count %>
+              <% group.categories.each do |transaction| %>
+                <% credit += transaction.amount %>
+              <% end %>
+            <% end %>
+            <%= "$#{credit}" %>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<% if @transactions.empty? %>
+  <div class="container mt-3">
+    <div class="card text-bg-danger">
+      <div class="card-body">
+        <p class="card-text">There is no transactions yet please make a transaction and come back.</p>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="container mt-3">
+    <% @transactions.each do |transaction| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="row d-flex align-items-center">
+            <div class="col-7">
+              <p class="card-text fw-bold"><%= transaction.name %></p>
+            </div>
+            <div class="col-5">
+              <p class="card-text fw-bold"><small>
+                  $<%= transaction.amount %>
+                </small></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <p class="card-text"><small class="text-muted">3 min ago</small></p>
+          <%= button_to category_transaction_path(@group.id,transaction.id), class:"btn", method: :delete do %>
+            <i class="fa fa-trash text-danger"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= link_to new_category_transaction_path(params[:category_id]),class:"nav-link" do %>
+  <section class="bg-success shadow text-center text-white p-2 mt-5">
+    <p class="border border-white my-3 p-1">Add New Transaction</p>
+  </section>
+<% end %>

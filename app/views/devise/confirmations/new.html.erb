@@ -1,0 +1,17 @@
+<%= render "shared/navbar", {text:"Resend Confirmation", path: :back, visible:"visible"} %>
+<%= render "devise/shared/error_messages", resource: resource %>
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group mb-3">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class:"form-control", placeholder:"name@example.com" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Resend confirmation", class:"btn btn-primary btn-sm" %>
+      </div>
+    </div>
+    <div class="card-footer">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>

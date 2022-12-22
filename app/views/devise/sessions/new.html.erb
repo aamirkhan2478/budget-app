@@ -1,0 +1,26 @@
+<%= render "shared/navbar", {text:"Login", path:root_path, visible:"visible"} %>
+<%= render "shared/flash_messages" %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group mb-3">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control",placeholder:"name@example.com" %>
+      </div>
+      <div class="form-group mb-3">
+        <%= f.password_field :password, autocomplete: "current-password", class:"form-control",placeholder:"Password" %>
+      </div>
+      <% if devise_mapping.rememberable? %>
+        <div class="form-check mb-3">
+          <%= f.check_box :remember_me, class:"form-check-input" %>
+          <%= f.label :remember_me, class:"form-check-label" %>
+        </div>
+      <% end %>
+      <div class="actions">
+        <%= f.submit "Log in", class:"btn btn-primary btn-sm" %>
+      </div>
+    </div>
+    <div class="card-footer">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>

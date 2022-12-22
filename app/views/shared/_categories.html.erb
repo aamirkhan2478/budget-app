@@ -1,0 +1,63 @@
+<%= render "shared/navbar", {text:"Categories", path: root_path, visible:"invisible"} %>
+<%= render "shared/flash_messages" %>
+<div class="card" style="height:60px;">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-7">
+        <p class="text-muted">Credit</p>
+      </div>
+      <div class="col-4">
+        <p class="text-dark">
+          <small>
+            <% credit = 0 %>
+            <% @categories.each do |group| %>
+              <% total_groups = @categories.count %>
+              <% group.categories.each do |transaction| %>
+                <% credit += transaction.amount %>
+              <% end %>
+            <% end %>
+            <%= "$#{credit}" %>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-3">
+  <% @categories.each do |category| %>
+    <%= link_to category_transaction_index_path(category.id), class:"nav-link" do %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <div class="row d-flex align-items-center">
+            <div class="col-3">
+              <img src="<%= category.icon%>" class="img-fluid" alt="...">
+            </div>
+            <div class="col-5">
+              <p class="card-text"><%= category.name %></p>
+            </div>
+            <div class="col-4">
+              <p class="card-text fw-bold"><small>
+                  <% sum = 0 %>
+                  <% category.categories.each do |transaction| %>
+                    <% sum += transaction.amount %>
+                  <% end %>
+                  <%= "$#{sum}" %>
+                </small></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+          <p class="card-text"><small class="text-muted">3 min ago</small></p>
+          <%= button_to category_path(category.id), class:"btn", method: :delete do %>
+            <i class="fa fa-trash text-danger"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<%= link_to new_category_path,class:"nav-link" do %>
+  <section class="bg-success shadow text-center text-white p-2 mt-5">
+    <p class="border border-white my-3 p-1">Add New Category</p>
+  </section>
+<% end %>

@@ -1,0 +1,15 @@
+<%= render "shared/navbar", {text:"Add Transaction",path:category_transaction_index_path(params[:category_id]), visible:"visible"} %>
+<div class="container mt-3">
+  <%= form_with model: @transaction, url:category_transaction_index_path(params[:category_id]) do |f| %>
+    <div class="form-group mb-3">
+      <%= f.text_field :name,  class:"form-control", Placeholder:"Name"%>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.number_field :amount, class:"form-control", placeholder:"Amount" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= select_tag "group", options_for_select(@categories.map { |group| [group.name, group.id] }), {prompt:"Select Category", required:true, class:"form-select"}%>
+    </div>
+    <%= f.submit "Add Transaction",class:"btn btn-primary btn-sm" %>
+  </div>
+<% end %>

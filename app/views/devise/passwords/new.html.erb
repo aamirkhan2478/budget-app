@@ -1,0 +1,17 @@
+<%= render "shared/navbar", {text:"Forget Password", path:new_user_session_path, visible:"visible"} %>
+<%= render "devise/shared/error_messages", resource: resource %>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group mb-3">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control",placeholder:"name@example.com" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions", class:"btn btn-primary btn-sm" %>
+      </div>
+    </div>
+    <div class="card-footer">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>
