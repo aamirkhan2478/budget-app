@@ -17,8 +17,6 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Group.find(params[:id])
-    @category.group_categories.destroy_all
-    Category.destroy_all
     @category.destroy
     if @category.destroy
       redirect_to root_path
