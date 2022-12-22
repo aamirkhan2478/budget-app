@@ -23,6 +23,7 @@
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [❓ FAQ ](#-faq-)
+  - [� Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
@@ -213,6 +214,14 @@ Feel free to check the [issues page](https://github.com/aamirkhan2478/my-blog/is
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
