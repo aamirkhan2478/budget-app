@@ -122,7 +122,6 @@ Clone this repository to your desired folder:
 commands:
 
 ```sh
-  cd my-blog
   git clone git@github.com:aamirkhan2478/budget-app.git
 ```
 
