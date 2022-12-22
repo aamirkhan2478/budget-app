@@ -10,6 +10,7 @@
     - [Full Stack ](#full-stack-)
     - [Key Features ](#key-features-)
   - [:camera: Screen Shots](#camera-screen-shots)
+  - [:movie\_camera: Video documentation](#movie_camera-video-documentation)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -83,6 +84,10 @@
 <img src="./screenshots/ss-4.png"/>
 <img src="./screenshots/ss-5.png"/>
 </details>
+
+<!-- Video -->
+## :movie_camera: Video documentation
+[video](https://drive.google.com/file/d/1J3jDFveZznVjx5uZs9z9lN_yW7bPMWUU/view?usp=sharing)
 
 <!-- LIVE DEMO -->
 
