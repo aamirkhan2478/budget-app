@@ -4,7 +4,9 @@
 # root "articles#index"
 Rails.application.routes.draw do
   devise_for :users
-  root 'splash_screen#index'
+  root "splash_screen#index"
 
-  resources :categories, only: [:index, :show, :create, :destroy]
+  resources :categories, only: [:index, :show, :create, :destroy, :new] do
+    resources :transaction, only: [:index, :create, :destroy, :new]
+  end
 end

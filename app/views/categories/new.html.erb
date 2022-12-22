@@ -1,0 +1,13 @@
+<%= render "shared/navbar", {text:"Add Category", path:root_path} %>
+<%= render "shared/flash_messages" %>
+<div class="container mt-3">
+  <%= form_with model: @category, url:categories_path do |f| %>
+    <div class="form-group mb-3">
+      <%= f.select :icon, ["Select Category",["Housing","housing.png"], ["Transportation","transportation.png"], ["Food","burger.png"], ["Utilities","utilities.png"], ["Clothing","clothing.png"], ["Medical/Healthcare","medical.png"], ["Insurance","insurance.png"] ], {}, {class:"form-select"} %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.text_field :name,  class:"form-control", Placeholder:"Name"%>
+    </div>
+    <%= f.submit "Add Category",class:"btn btn-primary btn-sm" %>
+  </div>
+<% end %>
